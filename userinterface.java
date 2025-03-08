@@ -95,8 +95,7 @@ public class userinterface {
                             System.err.println("Mahasiswa dengan NIM: " + key + "tidak ada di database");
                         }
 
-                        break;
-                    case "D":
+                        break; case "D":
                         System.out.println("INFO: Anda memilih menu Delete");
                         db.view();
                         System.out.println("input key (NIM Mahasiswa yang akan dihapus): ");
