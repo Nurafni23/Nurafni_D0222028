@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class userinterface {
     public static void tampilkanmenu() {
         System.out.println();
-        System.out.println("+===============+");
+        System.out.println("+===================+");
         System.out.println("|    Pilih menu:    |");
         System.out.println("---------------------");
         System.out.println("|    [C] : Create   |");
