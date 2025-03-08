@@ -77,25 +77,27 @@ public class Database {
         System.out.println("--------------------------------------------------------------------------------");
 
     }
-    boolean insert (String nim,String nama, String alamat, int semester, int sks, double ipk){
+    public boolean insert (String nim,String nama, String alamat, int semester, int sks, double ipk){
         boolean status = true;
-    //primary key
-        if(!data.isEmpty()){
-            for (int i=0; i < data.size(); i ++){
-                if(data.get(i).getNim().equalsIgnoreCase(nim)){
+        //cek primary key
+        if (!data.isEmpty()){
+            for (int i = 0; i < data.size(); i++) {
+                if (data.get(i).getNim().equalsIgnoreCase(nim)){
                     status = false;
                     break;
                 }
+
             }
         }
-        if (status == true){
-            mahasiswa mhs= new mahasiswa (nim, nama, alamat, semester, sks, ipk);
+        if (status == true) {
+            mahasiswa mhs = new mahasiswa(nim, nama, alamat, semester, sks, ipk);
             data.add(mhs);
             save();
         }
-        return status;
 
+        return status;
     }
+
     public int search (String nim) {
         int index =-1;
         if(!data.isEmpty()) {
